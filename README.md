@@ -1,9 +1,9 @@
 # RouteIQ — AI-Powered Sales Inbox & Task Routing
 
 **Candidate ID**: `saisradha888@gmail.com`  
-**Deployed Backend URL**: `https://routeiq-backend.onrender.com`  
+**Deployed Backend URL**: `https://routeiq-y6ke.onrender.com`  
 **Deployed Frontend URL**: `https://routeiq-qpw1.vercel.app`  
-**Conversational Chat Endpoint**: `https://routeiq-backend.onrender.com/api/chat`  
+**Conversational Chat Endpoint**: `https://routeiq-y6ke.onrender.com/api/chat`  
 
 ---
 
