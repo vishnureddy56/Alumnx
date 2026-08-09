@@ -39,5 +39,3 @@ def init_db():
     from app.models.thread_history import ThreadHistory
     Base.metadata.create_all(bind=engine)
 
-
-init_db()
