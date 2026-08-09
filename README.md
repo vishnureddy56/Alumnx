@@ -135,7 +135,7 @@ Create `.env` in `backend/`:
 GEMINI_API_KEY=your_gemini_api_key
 GEMINI_MODEL=gemini-2.5-flash
 DATABASE_URL=sqlite:///./routeiq.db
-CANDIDATE_ID=priya.sharma@gmail.com
+CANDIDATE_ID=saisradha888@gmail.com
 FRONTEND_URL=http://localhost:5173
 PORT=8000
 HOST=0.0.0.0
