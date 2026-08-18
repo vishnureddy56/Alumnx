@@ -27,13 +27,13 @@ def ingest_emails(payload: IngestRequest, db: Session = Depends(get_db)):
 
 @router.get("/api/tasks")
 def list_api_tasks(
-    candidate_id: Optional[str] = Query("saisradha888@gmail.com"),
+    candidate_id: Optional[str] = Query("vishnureddynandyala1234@gmail.com"),
     db: Session = Depends(get_db)
 ):
     """
     GET /api/tasks: Returns all tasks enriched with processing metadata, including skipped emails.
     """
-    norm_candidate = candidate_id.strip().lower() if candidate_id else "saisradha888@gmail.com"
+    norm_candidate = candidate_id.strip().lower() if candidate_id else "vishnureddynandyala1234@gmail.com"
 
     tasks = db.query(Task).filter(Task.candidate_id == norm_candidate).order_by(Task.created_at.desc()).all()
     processed_emails = db.query(ProcessedEmail).filter(
@@ -85,13 +85,13 @@ def list_api_tasks(
 
 @router.get("/api/stats", response_model=StatsResponse)
 def get_stats(
-    candidate_id: Optional[str] = Query("saisradha888@gmail.com"),
+    candidate_id: Optional[str] = Query("vishnureddynandyala1234@gmail.com"),
     db: Session = Depends(get_db)
 ):
     """
     GET /api/stats: Aggregate counts: processed, created, updated, skipped, spurious rate, etc.
     """
-    norm_candidate = candidate_id.strip().lower() if candidate_id else "saisradha888@gmail.com"
+    norm_candidate = candidate_id.strip().lower() if candidate_id else "vishnureddynandyala1234@gmail.com"
 
     processed = db.query(ProcessedEmail).filter(ProcessedEmail.candidate_id == norm_candidate).count()
     created = db.query(ProcessedEmail).filter(

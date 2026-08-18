@@ -5,12 +5,12 @@ from typing import Optional
 
 def normalize_candidate_id(candidate_id: Optional[str]) -> str:
     if not candidate_id:
-        return "saisradha888@gmail.com"
+        return "vishnureddynandyala1234@gmail.com"
     return candidate_id.strip().lower()
 
 
 class Settings(BaseSettings):
-    CANDIDATE_ID: str = "saisradha888@gmail.com"
+    CANDIDATE_ID: str = "vishnureddynandyala1234@gmail.com"
     DATABASE_URL: str = "sqlite:///./routeiq.db"
     GEMINI_API_KEY: Optional[str] = None
     GEMINI_MODEL: str = "gemini-2.5-flash"

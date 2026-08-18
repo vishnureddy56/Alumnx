@@ -1,6 +1,6 @@
 # RouteIQ — AI-Powered Sales Inbox & Task Routing
 
-**Candidate ID**: `saisradha888@gmail.com`  
+**Candidate ID**: `vishnureddynandyala1234@gmail.com`  
 **Deployed Backend URL**: `https://routeiq-y6ke.onrender.com`  
 **Deployed Frontend URL**: `https://routeiq-qpw1.vercel.app`  
 **Conversational Chat Endpoint**: `https://routeiq-y6ke.onrender.com/api/chat`  
@@ -135,7 +135,7 @@ Create `.env` in `backend/`:
 GEMINI_API_KEY=your_gemini_api_key
 GEMINI_MODEL=gemini-2.5-flash
 DATABASE_URL=sqlite:///./routeiq.db
-CANDIDATE_ID=saisradha888@gmail.com
+CANDIDATE_ID=vishnureddynandyala1234@gmail.com
 FRONTEND_URL=http://localhost:5173
 PORT=8000
 HOST=0.0.0.0

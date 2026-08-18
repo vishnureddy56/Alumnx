@@ -1,6 +1,7 @@
 import uuid
 import pytest
 from fastapi.testclient import TestClient
+from app.database import init_db
 from app.main import app
 
 client = TestClient(app)
@@ -10,6 +11,7 @@ TEST_CANDIDATE_ID = f"chat_test_{uuid.uuid4().hex[:6]}@test.com"
 
 @pytest.fixture(scope="module", autouse=True)
 def setup_chat_test_data():
+    init_db()
     candidate_id = TEST_CANDIDATE_ID
     batch = [
         # 1. Enterprise RFP with deal value

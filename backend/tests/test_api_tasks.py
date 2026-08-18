@@ -1,7 +1,9 @@
 import pytest
 from fastapi.testclient import TestClient
+from app.database import init_db
 from app.main import app
 
+init_db()
 client = TestClient(app)
 
 
@@ -22,7 +24,7 @@ def test_users_endpoint():
 
 def test_create_task_success():
     payload = {
-        "candidate_id": "saisradha888@gmail.com",
+        "candidate_id": "vishnureddynandyala1234@gmail.com",
         "source_email_id": "em_test_001",
         "thread_id": "th_test_001",
         "title": "RFP — Enterprise DMS for Meridian Steel",
@@ -39,14 +41,14 @@ def test_create_task_success():
     assert response.status_code == 201
     data = response.json()
     assert "task_id" in data
-    assert data["candidate_id"] == "saisradha888@gmail.com"
+    assert data["candidate_id"] == "vishnureddynandyala1234@gmail.com"
     assert data["source_email_id"] == "em_test_001"
     assert "created_at" in data
 
 
 def test_create_task_invalid_assignee_enum():
     payload = {
-        "candidate_id": "saisradha888@gmail.com",
+        "candidate_id": "vishnureddynandyala1234@gmail.com",
         "source_email_id": "em_test_002",
         "thread_id": "th_test_002",
         "title": "Invalid Assignee Test",
@@ -69,7 +71,7 @@ def test_create_task_invalid_assignee_enum():
 
 def test_create_task_invalid_category_enum():
     payload = {
-        "candidate_id": "saisradha888@gmail.com",
+        "candidate_id": "vishnureddynandyala1234@gmail.com",
         "source_email_id": "em_test_003",
         "thread_id": "th_test_003",
         "title": "Invalid Category Test",
@@ -93,7 +95,7 @@ def test_list_tasks_mandatory_candidate_id():
 
 
 def test_list_tasks_with_candidate_id():
-    response = client.get("/tasks?candidate_id=saisradha888@gmail.com")
+    response = client.get("/tasks?candidate_id=vishnureddynandyala1234@gmail.com")
     assert response.status_code == 200
     data = response.json()
     assert isinstance(data, list)
@@ -103,7 +105,7 @@ def test_list_tasks_with_candidate_id():
 def test_patch_task():
     # Create a task first
     payload = {
-        "candidate_id": "saisradha888@gmail.com",
+        "candidate_id": "vishnureddynandyala1234@gmail.com",
         "source_email_id": "em_test_patch",
         "thread_id": "th_test_patch",
         "title": "Initial Title",
